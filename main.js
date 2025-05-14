@@ -11,12 +11,8 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const storage = firebase.storage();
 
-document.getElementById("login-btn").addEventListener("click", () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider)
-    .then(result => alert("Benvingut/da " + result.user.displayName))
-    .catch(error => console.error(error));
-});
+document.getElementById("login-btn").addEventListener("click", loginConGoogle);
+document.getElementById("upload-btn").addEventListener("click", uploadNote);
 
 function uploadNote() {
   const file = document.getElementById("upload").files[0];
