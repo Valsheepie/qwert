@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Pujar Apunts - ApuntaJa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="centered">
+  <div class="card">
+    <h2>Pujar Apunts</h2>
+    <input type="file" id="upload"><br>
+    <input type="text" id="centro" placeholder="Centre"><br>
+    <input type="text" id="materia" placeholder="Matèria"><br>
+    <input type="text" id="curso" placeholder="Curs"><br>
+    <button id="upload-btn" class="btn-primary">Pujar</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="main.js"></script>
+  <script>
+    checkAuth();
+
+    document.getElementById("upload-btn").addEventListener("click", () => {
+      const file = document.getElementById("upload").files[0];
+      const centro = document.getElementById("centro").value;
+      const materia = document.getElementById("materia").value;
+      const curso = document.getElementById("curso").value;
+      uploadNote(file, centro, materia, curso);
+    });
+  </script>
+</body>
+</html>

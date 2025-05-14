@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Inici - ApuntaJa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ApuntaJa</h1>
+    <nav>
+      <a href="upload.html">Pujar</a>
+      <a href="account.html">Compte</a>
+      <a href="camera.html">Càmera</a>
+      <button onclick="logout()">Sortir</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Apunts disponibles</h2>
+      <div id="apunts" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script>
+    function logout() {
+      firebase.auth().signOut().then(() => window.location.href = "login.html");
+    }
+  </script>
+</body>
+</html>

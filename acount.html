@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>El Meu Compte - ApuntaJa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>El Meu Compte</h1>
+    <a href="home.html">Tornar</a>
+  </header>
+  <main class="centered">
+    <h2>Els meus apunts</h2>
+    <div id="meus-apunts"></div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="main.js"></script>
+  <script>
+    checkAuth();
+    setTimeout(() => {
+      loadUserNotes("meus-apunts");
+    }, 1000);
+  </script>
+</body>
+</html>
