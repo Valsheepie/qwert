@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAl3a_MpU3JviVdf4oEyaP3RWrYeSf6wDM",
+  apiKey: "google_api_key",
   authDomain: "apuntaja.firebaseapp.com",
   projectId: "apuntaja",
   storageBucket: "apuntaja.firebasestorage.app",
