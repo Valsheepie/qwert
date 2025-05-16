@@ -9,7 +9,7 @@ function checkAuth(redirectIfNotLogged = true) {
 function logout() {
   firebase.auth().signOut()
     .then(() => window.location.href = "login.html")
-    .catch(error => console.error("Error al cerrar sessió:", error));
+    .catch(error => console.error("Error al tancar sessió:", error));
 }
 
 function getUserId() {

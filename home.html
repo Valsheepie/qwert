@@ -16,19 +16,39 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Apunts disponibles</h2>
-      <div id="apunts" class="grid"></div>
-    </section>
+  <main class="centered">
+    <h2>Consulta Apunts</h2>
+    <div class="card">
+      <select id="centroSelect">
+        <option value="Institut1">Institut1</option>
+        <option value="Institut2">Institut2</option>
+      </select>
+      <select id="materiaSelect">
+        <option value="Matemàtiques">Matemàtiques</option>
+        <option value="Història">Història</option>
+      </select>
+      <select id="cursoSelect">
+        <option value="1r Batx">1r Batx</option>
+        <option value="2n Batx">2n Batx</option>
+      </select>
+      <button onclick="filtrar()" class="btn-primary">Filtrar</button>
+    </div>
+    <div id="apunts" class="grid"></div>
   </main>
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
   <script src="firebase-config.js"></script>
+  <script src="main.js"></script>
   <script>
-    function logout() {
-      firebase.auth().signOut().then(() => window.location.href = "login.html");
+    checkAuth();
+
+    function filtrar() {
+      const centro = document.getElementById("centroSelect").value;
+      const materia = document.getElementById("materiaSelect").value;
+      const curso = document.getElementById("cursoSelect").value;
+      loadFilteredNotes("apunts", centro, materia, curso);
     }
   </script>
 </body>
