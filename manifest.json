@@ -1,0 +1,15 @@
+{
+  "name": "ApuntaJa",
+  "short_name": "ApuntaJa",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077cc",
+  "icons": [
+    {
+      "src": "apuntaJa_logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

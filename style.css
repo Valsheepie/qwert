@@ -25,7 +25,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #0077cc;
+  background-color: #6BA738;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -36,11 +36,11 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #005fa3;
+  background-color: #6BA738;
 }
 
 header {
-  background-color: #0077cc;
+  background-color: #6BA738;
   color: white;
   padding: 15px;
   display: flex;
