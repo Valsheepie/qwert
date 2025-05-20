@@ -3,5 +3,4 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Puedes personalizar caché aquí si lo deseas
 });
